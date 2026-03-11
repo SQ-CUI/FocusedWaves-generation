@@ -3,7 +3,6 @@
 #This code is generated using R and runs in RStudio. 
 #The wave generation principle applicable to this code is derived from Chen et al.(2024)https://doi.org/10.1016/j.oceaneng.2024.118516
 #The size of wave tank was from DUT by Chen et al.(2024)
-#COPY the data from paddle_displacement_xyz.txt to the Piston_Movement.dat
 # ==================== Load necessary packages ====================
 library(ggplot2)
 library(gridExtra)
@@ -190,4 +189,5 @@ cat(sprintf("\nAnalysis at focusing moment (t = %.2f s):\n", t[t_b_idx]))
 cat(sprintf("  Wave paddle displacement: %.4f m\n", S[t_b_idx]))
 cat(sprintf("  Theoretical wave surface elevation: %.4f m\n", eta_focus[t_b_idx]))
 cat(sprintf("  Target amplitude A: %.4f m\n", A))
+
 cat(sprintf("  Relative error: %.2f%%\n", abs(eta_focus[t_b_idx] - A) / A * 100))
