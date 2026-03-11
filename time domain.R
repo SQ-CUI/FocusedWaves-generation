@@ -6,7 +6,7 @@
 # ==================== Load necessary packages ====================
 library(ggplot2)
 library(gridExtra)
-
+library(dplyr)
 # ==================== Parameter settings ====================
 d <- 0.4                # water depth (m)
 A <- 0.128              # target wave amplitude (m)
@@ -191,3 +191,4 @@ cat(sprintf("  Theoretical wave surface elevation: %.4f m\n", eta_focus[t_b_idx]
 cat(sprintf("  Target amplitude A: %.4f m\n", A))
 
 cat(sprintf("  Relative error: %.2f%%\n", abs(eta_focus[t_b_idx] - A) / A * 100))
+
